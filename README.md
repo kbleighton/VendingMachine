@@ -11,10 +11,9 @@ August 9, 2020
 6. Only 3 coins accepted (nickel, dime, quarter)
 
 GUI Instructions:
-				Press N Key to insert Nickel
-				Press D Key to insert Dime
-				Press Q Key to insert Quarter
-				Press Coin Return button or Spacebar to return coins
-				Press corresonding number Key to purchase an item (ie. Press 1 to purchase Item One)
-        
- 
+1. Press N Key to insert Nickel
+2. Press D Key to insert Dime
+3. Press Q Key to insert Quarter
+4. Press Coin Return button or Spacebar to return coins
+5. Press corresonding number Key to purchase an item (ie. Press 1 to purchase Item One)
+	
