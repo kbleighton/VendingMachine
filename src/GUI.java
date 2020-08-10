@@ -35,7 +35,9 @@ public class GUI implements KeyListener, ActionListener {
 				+ "Press Q Key to insert Quarter\n"
 				+ "Press Coin Return button or Spacebar to return coins\n"
 				+ "Press corresonding number Key to purchase an item\n"
-				+ "(ie. Press 1 to purchase Item One)\n"
+				+ "  (ie. Press 1 to purchase Item One)\n\n"
+				+ "Press F1 to reset Simulation\n"
+				+ "Press ESC to exit"
 				);
     	
     	frame.pack();
@@ -139,6 +141,14 @@ public class GUI implements KeyListener, ActionListener {
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_3) {
 			purchaseItem(Item.THREE);
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			// Exit
+			System.exit(0);
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_F1) {
+			// New Game
+			vm = new VendingMachine();
 		}
 		else {
 			showMessageDialog(null, "Invalid Input. Please Try Again");
