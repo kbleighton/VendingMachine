@@ -17,6 +17,7 @@ public class GUI implements KeyListener, ActionListener {
 	
 	private JLabel balanceLabel;
 	private JLabel inventoryLabel;
+	private JLabel instructionsLabel;
 	private JFrame frame;
 	private JPanel panel;
 	private JButton coinReturnButton;
@@ -29,10 +30,10 @@ public class GUI implements KeyListener, ActionListener {
     	
 		addComponents();
 		
-		showMessageDialog(null, "Vending Machine Instructions\n" 
+		showMessageDialog(null, "Vending Machine Instructions\n\n" 
 				+ "Press N Key to insert Nickel\n"
 				+ "Press D Key to insert Dime\n"
-				+ "Press Q Key to insert Quarter\n"
+				+ "Press Q Key to insert Quarter\n\n"
 				+ "Press Coin Return button or Spacebar to return coins\n"
 				+ "Press corresonding number Key to purchase an item\n"
 				+ "  (ie. Press 1 to purchase Item One)\n\n"
@@ -57,12 +58,21 @@ public class GUI implements KeyListener, ActionListener {
     	coinReturnButton.addKeyListener(this);
     	
     	balanceLabel = new JLabel("Balance: " + vm.getBalance() + " cents");
-    	
     	inventoryLabel = new JLabel("<html>Inventory<br/>" + vm.getInventory() + "</html>");
+    	instructionsLabel = new JLabel("<html>Press N Key to insert Nickel<br/>"
+				+ "Press D Key to insert Dime<br/>"
+				+ "Press Q Key to insert Quarter<br/><br/>"
+				+ "Press Coin Return button or Spacebar to return coins<br/>"
+				+ "Press corresonding number Key to purchase an item<br/>"
+				+ "  (ie. Press 1 to purchase Item One)<br/><br/>"
+				+ "Press F1 to reset Simulation<br/>"
+				+ "Press ESC to exit<br/><br/></html>"
+				);
     	
     	panel = new JPanel();
-    	panel.setBorder(BorderFactory.createEmptyBorder(300, 300, 100, 300));
+    	panel.setBorder(BorderFactory.createEmptyBorder(50, 200, 50, 200));
     	panel.setLayout(new GridLayout(0, 1));
+    	panel.add(instructionsLabel);
     	panel.add(coinReturnButton);
     	panel.add(balanceLabel);
     	panel.add(inventoryLabel);
@@ -159,6 +169,7 @@ public class GUI implements KeyListener, ActionListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
 	}
 
 	@Override
